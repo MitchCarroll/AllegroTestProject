@@ -1,0 +1,62 @@
+This is a simple test project that provides a basic boilerplate
+template for git/cmake/allegro projects
+The main files you need to know about are:
+CMakeLists.txt
+src/test.cpp
+data/test.png
+.gitignore
+
+these are actually the only ones that I created myself. 
+the rest are created automatically by CMake and git.
+
+First, I created a git project by running:
+git init
+
+after that, I needed to give it a little more information:
+git config --global user.email="c.mitch.carroll@gmail.com"
+git config --global user.name="C. Mitch Carroll"
+
+these are necessary for you to be able to commit changes to
+the project. After that, I made a file called .gitignore 
+that has a simple list of file types for git to ignore
+(hence the name).
+once that's done, all that's left to get git set up is to
+make an initial commit:
+git add -A
+git commit
+
+the first command adds all changes to the staging area, and 
+the second commits them, but first it opens a nano editor so 
+you can add a comment to the commit. You should do these two 
+steps early and often. This is the best way of being able to 
+undo mistakes, and get things back to a known working state.
+It also gives you a nice history of what's been done, and by whom.
+sort of like saving a game.
+
+next, I made a couple of directories: data and src
+I made a simple test image called test.png, and put it in data,
+and then made a simple test program and put it in the src directory.
+
+once again, at this point one should run:
+git add -A
+git commit
+
+The last part is to put together our build system and installer
+I created a text file in the root project directory called
+CMakeLists.txt and ran:
+cmake .
+
+This installs all of the necessary build files, and creates a makefile.
+
+Once again,:
+git add -A && git commit
+
+now, to actually build and install, all we do is:
+make
+sudo make install
+
+make sure not to ever run make itself as root; only make install
+
+
+For more detailed information, you will need to read the comments in 
+CMakeLists.txt and src/test.cpp. or, you know, do some research...

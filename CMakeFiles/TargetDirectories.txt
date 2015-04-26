@@ -1,0 +1,1 @@
+/home/mowgli/projects/AllegroTestProject/CMakeFiles/altest.dir

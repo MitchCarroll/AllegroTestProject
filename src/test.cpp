@@ -1,4 +1,3 @@
-
 /* C. Mitch Carroll
    This is a simple test program for Allegro5 and CMake.
    this file is part of a test project which can be used as boilerplate

@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/altest.dir/src/test.cpp.o  -o altest -rdynamic -lallegro -lallegro_main -lallegro_image 

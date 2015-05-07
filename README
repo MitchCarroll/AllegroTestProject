@@ -1,5 +1,6 @@
 This is a simple test project that provides a basic boilerplate
 template for git/cmake/allegro projects
+
 The main files you need to know about are:
 CMakeLists.txt
 src/test.cpp
@@ -9,12 +10,31 @@ data/test.png
 these are actually the only ones that I created myself. 
 the rest are created automatically by CMake and git.
 
+To get up and running, run:
+cmake . && make clean && make && sudo make install && altest
+
+Alternately, you can just run each of those commands one after the other like so:
+cmake .
+make clean
+make
+sudo make install
+altest
+
+NEVER RUN ANY OF THESE COMMANDS AS ROOT EXCEPT FOR THE MAKE INSTALL
+in fact, you can even configure it to install to your home directory so you don't need to be root
+for that either, really. That is SLIGHTLY more advanced, though...
+Also, at this time, cmake does not make an 'uninstall' make target, and I don't know the RIGHT(tm)
+way to do that. For right now, though, if you want to uninstall, you can look in install_manifest.txt
+for a list of files which were installed, and just remove those files.
+
 First, I created a git project by running:
 git init
 
 after that, I needed to give it a little more information:
 git config --global user.email="c.mitch.carroll@gmail.com"
 git config --global user.name="C. Mitch Carroll"
+
+Obviously, you should substitute these for your own contact info.
 
 these are necessary for you to be able to commit changes to
 the project. After that, I made a file called .gitignore 

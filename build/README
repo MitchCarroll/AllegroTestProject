@@ -1,0 +1,5 @@
+This file is really only here so git will track the directory.
+please run all build commands from inside this directory.
+This directory can safely be emptied in almost all cases,
+just remember to leave SOMETHING in this directory if you want it
+to be tracked by git.

@@ -13,7 +13,7 @@ add_executable(altest ${SOURCES})
 #this command names the executable, and which files get compiled to make it
 install(DIRECTORY data DESTINATION "share/${PROJECT_NAME}")
 #this installs our data directory to the proper system folder
-install(PROGRAMS altest DESTINATION bin)
+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/altest DESTINATION bin)
 #this installs the executable to the proper system directory
 include(InstallRequiredSystemLibraries)
 #this makes the makefile check for our libraries before trying to install
